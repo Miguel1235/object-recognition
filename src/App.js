@@ -1,37 +1,38 @@
 import {useState} from "react";
-import './App.css';
-
+import {Route, Switch} from 'react-router-dom'
 import Particles from "react-particles-js";
 import ParticlesConfig from "./config/particlesjs-config.json"
-
-
-import Navigation from './Components/Navigation/Navigation'
 
 import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Home from "./Components/Home/Home";
+import Navigation from './Components/Navigation/Navigation'
 
-import {Route, Switch} from 'react-router-dom'
+import './App.css';
 
-const App = () =>{
-    const [isSignedIn,setSignedIn] = useState(false)
-    const [user,setUser] = useState({
-        "_id":'',
-        "name" : "",
-        "email" : "",
-        "picsUploaded" : 0,
+const App = () => {
+    const [isSignedIn, setSignedIn] = useState(false)
+    const [user, setUser] = useState({
+        "_id": '',
+        "name": "",
+        "email": "",
+        "picsUploaded": 0,
     })
 
-    const handleUser = (user)=> setUser(user)
-    const handleIsSignedIn = (isSignedIn) => setSignedIn(isSignedIn)
+    const handleUser = (user) => setUser(user)
 
-    const handleLogOut = ()=>{
+    const handleLogOut = () => {
         setUser({})
-        handleIsSignedIn(false)
+        setSignedIn(false)
     }
 
-    return <div style={{position:"relative"}}>
-        <div style={{position:"absolute",zIndex:-1}}>
+    const handleLogIn = (user)=>{
+        setUser(user)
+        setSignedIn(true)
+    }
+
+    return <div style={{position: "relative"}}>
+        <div style={{position: "absolute", zIndex: -1}}>
             <Particles params={ParticlesConfig}/>
         </div>
         <Navigation isSignedIn={isSignedIn} handleLogOut={handleLogOut}/>
@@ -40,7 +41,7 @@ const App = () =>{
                 <SignUp/>
             </Route>
             <Route path="/signIn">
-                <SignIn handleUser={handleUser} handleIsSignedIn={handleIsSignedIn}/>
+                <SignIn handleLogIn={handleLogIn}/>
             </Route>
             <Route path="/Home">
                 <Home isSignedIn={isSignedIn} handleUser={handleUser} user={user}/>
