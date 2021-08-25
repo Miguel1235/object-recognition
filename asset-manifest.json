@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/object-recognition/static/css/main.836f9e7d.chunk.css",
-    "main.js": "/object-recognition/static/js/main.114319f0.chunk.js",
-    "main.js.map": "/object-recognition/static/js/main.114319f0.chunk.js.map",
+    "main.js": "/object-recognition/static/js/main.b5f1c882.chunk.js",
+    "main.js.map": "/object-recognition/static/js/main.b5f1c882.chunk.js.map",
     "runtime-main.js": "/object-recognition/static/js/runtime-main.623af1e5.js",
     "runtime-main.js.map": "/object-recognition/static/js/runtime-main.623af1e5.js.map",
     "static/js/2.4866a566.chunk.js": "/object-recognition/static/js/2.4866a566.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.623af1e5.js",
     "static/js/2.4866a566.chunk.js",
     "static/css/main.836f9e7d.chunk.css",
-    "static/js/main.114319f0.chunk.js"
+    "static/js/main.b5f1c882.chunk.js"
   ]
 }
