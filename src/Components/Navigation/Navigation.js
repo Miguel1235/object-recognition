@@ -11,7 +11,7 @@ const Navigation = ({isSignedIn,handleLogOut}) =>{
     }
     else{
         return <nav style={{display:"flex",justifyContent:"flex-end"}}>
-            <Link to="/signIn" className="link" onClick={()=>handleLogOut()}> Salir </Link>
+            <Link to="/" className="link" onClick={()=>handleLogOut()}> Salir </Link>
         </nav>
     }
 }

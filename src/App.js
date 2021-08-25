@@ -7,6 +7,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import SignUp from "./Components/SignUp/SignUp";
 import Home from "./Components/Home/Home";
 import Navigation from './Components/Navigation/Navigation'
+import Landing from "./Components/Landing/Landing";
 
 import './App.css';
 
@@ -47,7 +48,7 @@ const App = () => {
                 <Home isSignedIn={isSignedIn} handleUser={handleUser} user={user}/>
             </Route>
             <Route path="/">
-                <SignUp/>
+                <Landing/>
             </Route>
         </Switch>
     </div>

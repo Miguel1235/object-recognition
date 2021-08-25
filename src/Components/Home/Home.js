@@ -38,8 +38,8 @@ const Home = ({isSignedIn, user, handleUser}) => {
             <h2 style={{textAlign: "center"}}>Hola {user.name || 'Anon'}, has subido {user.picsUploaded} imágenes en
                 total</h2>
             <p className="centerFlex">Subí un link de una imagen y la app va a predecir de que se trata, por ejemplo:
-                <a href="https://image.freepik.com/free-vector/researching-concept-illustration_114360-5466.jpg">
-                    Imagen
+                <a style={{padding:"8px"}} href="https://image.freepik.com/free-vector/researching-concept-illustration_114360-5466.jpg">
+                    (click derecho -> copiar dirección de imagen)
                 </a>
             </p>
             <form className="centerFlex" onSubmit={handleSubmit}>
