@@ -40,7 +40,7 @@ const SignUp = () => {
             </label>
             <input type="password" value={password} onChange={handlePasswordChange} name="password" required
                    minLength="6"/>
-            <input type="submit" value="Registrar"/>
+            <input type="submit" value="Registrar" style={{cursor:"pointer"}}/>
         </form>
     </div>
 }

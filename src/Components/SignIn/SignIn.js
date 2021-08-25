@@ -34,7 +34,7 @@ const SignIn = ({handleLogIn}) => {
             <label> Contraseña </label>
             <input type="password" value={password} onChange={handlePasswordChange} name="password" required
                    minLength="6"/>
-            <input type="submit" value="SignIn"/>
+            <input type="submit" value="SignIn" style={{cursor:"pointer"}}/>
         </form>
     </div>
 }
